@@ -53,7 +53,6 @@ int main()
 	int num=0;
 	int starter[]={99,12,5,220,334,10,22,7,18,4,3};
 	vector A(starter,starter+sizeof(starter)/sizeof(starter[0]));
-	vector B(starter,starter+sizeof(starter)/sizeof(starter[0]));
 	mergeSort(A,0,A.size()-1);
 	while(i<A.size())
 	{
