@@ -34,6 +34,8 @@ void merge(refvec A,int p,int q,int r,long long& count)
 		else
 		{
 			A[k]=R[j];
+			//add the length leftover in the left half **this is n1+1 (since n1 is index tracker we add one)
+			//-i since we have put i elements from left half back into A already**
 			count+=n1+1-i;
 			j++;
 		}
