@@ -27,7 +27,6 @@ void merge(rvector A, int p, int q, int r)
 	{
 		if(L[m]<=R[n])
 		{
-			std::cout<<L[m]<<"|"<<m<<"\n";
 			A[k]=L[m];
 			m++;
 		}
@@ -51,14 +50,24 @@ int main()
 {
 	int i=0;
 	int num=0;
-	int starter[]={99,12,5,220,334,10,22,7,18,4,3};
+	int starter[]={44,12,5,220,334,10,22,7,18,4,3};
 	vector A(starter,starter+sizeof(starter)/sizeof(starter[0]));
-	mergeSort(A,0,A.size()-1);
+	std::cout<<"A= [";
 	while(i<A.size())
 	{
-		std::cout<<A[i]<<"|";
+		std::cout<<A[i]<<",";
 		i++;
 	}
-	std::cout<<"\n";
+	std::cout<<"]"<<"\n";
+
+	mergeSort(A,0,A.size()-1);
+	i=0;
+	std::cout<<"Asort= [";
+	while(i<A.size())
+	{
+		std::cout<<A[i]<<",";
+		i++;
+	}
+	std::cout<<"]"<<"\n";
 	return 0;
 }        
