@@ -34,19 +34,20 @@ public:
 		  next=i;
 	  else if(tree[parent[i]][1]==-2)
 		  tree[parent[i]][1]=i;
-	  else
+	  else if(tree[parent[i]][1]!=-2)
 		  tree[parent[i]][2]=i;
   }
-  return Height(tree,next)+1;
+  //return Height(tree,next,1);
+  return tree[next][2];
   }
-  int Height(std::vector<std::vector<int> > tree,int next)
+  /*int Height(std::vector<std::vector<int> > tree,int next,int side)
   {
 	  if(next<0)
 		  return 0;
-	  if(tree[next][1]==-2)
+	  if(tree[next][side]==-2)
 		  return 0;
-	  return 1+ std::max(Height(tree,tree[next][1]),Height(tree,tree[next][2]));
-  }
+	  return 1+ std::max(Height(tree,tree[next][side],1),Height(tree,tree[next][side],2));
+  }*/
 };
 int main() {
   std::ios_base::sync_with_stdio(0);
